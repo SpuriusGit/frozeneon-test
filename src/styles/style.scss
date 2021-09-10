@@ -14,7 +14,7 @@ body{
   background-repeat: no-repeat,no-repeat,repeat-y;
   background-size: 60% 70%,500px 55%,cover;
   background-position:left bottom, right center,center center;
-  height: 750px;
+  height: 100vh;
   background-clip: content-box;
   box-shadow: 100px 20px -30px 20px lightslategray;
 }
@@ -130,7 +130,7 @@ body{
   .shop-content{
     padding: 20px;
     background-color: rgba(36, 35, 51, 1);
-    height: 560px;
+    height: 80vh;
     box-shadow: 2px 2px 12px -12px black;
     margin-bottom: 20px;
     overflow: hidden;

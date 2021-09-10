@@ -1,4 +1,10 @@
 /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 360px){
+    .header-block_coins,.header-block_crystals{
+        
+    }
+
+}
 @media (max-width: 612px) {
     .shop-content_list-crystals,.shop-content_list-coins{
         grid-template-columns: repeat(1, 1fr) !important;
