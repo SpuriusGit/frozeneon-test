@@ -26,8 +26,13 @@
     .shop-navigation_item{
         margin: 0 !important;
         border-radius: 0px !important;
-        font-size: 14px !important;
+        font-size: 16px !important;
         text-overflow: clip;
+        &:hover{
+            &::after{
+                margin-top: 18px !important;
+            }
+        }
     }
     .header-block_coins,.header-block_crystals{
         position: relative;

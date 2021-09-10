@@ -125,17 +125,29 @@ body{
       border-radius: 20px 20px 0 0;
       background-color: rgba(36, 35, 51, 1);
       cursor: pointer;
+      &:hover{
+        border-bottom:1px solid rgb(175, 41, 139);
+        &::after{
+          content: '';
+          display: block;
+          height: 3px;
+          width: 80%;
+          margin:12px auto 0;
+          background: linear-gradient(45deg,#F52CBF, #FF7C46);;
+        }
+      }
     }
   }
   .shop-content{
     padding: 20px;
     background-color: rgba(36, 35, 51, 1);
-    height: 80vh;
-    box-shadow: 2px 2px 12px -12px black;
+    height: 75vh;
+    box-shadow: 15px 15px 12px -5px black;
     margin-bottom: 20px;
     overflow: hidden;
     overflow-x: hidden;
     overflow-y: scroll;
+    // box-shadow: inset 0px 0px 8px 8px black;
     h1{
       padding-top: 10px;
       width: 200px;
@@ -164,13 +176,14 @@ body{
         background-image: url('../images/shop-item-bg.png');
         background-size: cover;
         background-position: center;
+        &:hover{
+          cursor: pointer;
+          transition: .5s ease-in-out;
+          box-shadow:inset 5px 5px 15px 5px black;
+        }
         img{
           height: 120px;
           margin:10px auto;
-        }
-        .first{
-          height: 85px;
-          margin: 45px auto 5px;
         }
         div{ 
           display: flex;
