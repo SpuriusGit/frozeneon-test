@@ -47,9 +47,6 @@ body{
     background-color: #bbdefb;
     cursor: default;
 }
-#tab-0{
-  display: grid;
-}
 .tabs>div:not(.tabs__links){
   display: none;
   order: 1;
@@ -57,6 +54,4 @@ body{
 
 .tabs>div:target {
   display: grid;
-}
-
-  
+}  
