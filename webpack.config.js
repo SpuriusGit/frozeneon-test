@@ -10,13 +10,13 @@ module.exports = {
     main: "./src/scripts/main.js",
   },
   output: {
-    publicPath:'/',
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "build"),
-  },
+    filename: "main-[hash:8].js",
+    path: path.resolve(__dirname, 'build'),
+    assetModuleFilename: 'images/[hash][ext][query]'
+},
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/html/index.html",
+      template: "src/index.html",
     }),
     new CleanWebpackPlugin({}),
     new webpack.ProvidePlugin({
@@ -48,25 +48,30 @@ module.exports = {
         ],
       },
       {
-        test: /\.html$/i,
-        loader: 'html-loader',
+        test: /\.html$/,
+        loader: "html-loader",
         options: {
-          sources: false,
+          
+          // Disables attributes processing
+          sources: true,
         },
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/,
+        test: /\.(gif|png|jpeg|svg)$/,
         use: [
             {
                 loader: 'file-loader',
                 options: {
                   name:'[name].[ext]',
-                  outputPath: 'images'
+                  outputPath: './images/',
+                  publicPath: './images/'
                 }
             },
             {
                 loader: 'image-webpack-loader',
-                options: { }
+                options: { 
+                  
+                }
             }
         ]
       },

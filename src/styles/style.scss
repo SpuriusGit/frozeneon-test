@@ -38,7 +38,12 @@ body{
   color: green;
 }
 // tabs
-
+#tab-0{
+  display: grid;
+}
+a:focus #tab-0{
+  display: none !important;
+}
 .tabs>#content-1:target~.tabs__links>a[href="#content-1"],
 .tabs>#content-2:target~.tabs__links>a[href="#content-2"],
 .tabs>#content-2:target~.tabs__links>a[href="#content-3"],
