@@ -10,6 +10,7 @@ module.exports = {
     main: "./src/scripts/main.js",
   },
   output: {
+    publicPath:'/',
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "build"),
   },
@@ -47,15 +48,31 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|svg|gif)$/,
-        use: ["file-loader",{
-          loader: 'image-webpack-loader',
-          options: {
-            bypassOnDebug: true, // webpack@1.x
-            disable: true, // webpack@2.x and newer
-          },
-        }],
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options: {
+          sources: false,
+        },
       },
+      {
+    test: /\.(gif|png|jpe?g|svg)$/,
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'images/'
+        }
+    },
+    {
+        loader: 'image-webpack-loader',
+        options: {  
+          name: '[name].[ext]',
+          outputPath: 'images/'
+        }
+    }
+    ]
+},
       {
         test: `/.\m?js$/`,
         use: {

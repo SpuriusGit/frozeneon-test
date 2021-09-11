@@ -1,113 +1,100 @@
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 360px){
-    .header-block_coins,.header-block_crystals{
-        
-    }
-
-}
-@media (max-width: 612px) {
-    .shop-content_list-crystals,.shop-content_list-coins{
-        grid-template-columns: repeat(1, 1fr) !important;
-    }
-    .header-button_home,.header-button_back{
-        margin: 20px 5px !important;
-        width: 45px !important;
-        font-size: 0 !important;
-    }
-    .shop-container{
-        margin: 60px auto 0 !important;
-    }
-    .shop-navigation{
-        position: absolute;
-        top:90px;
-        left: 0;
-        width: 100% !important;
-    }
-    .shop-navigation_item{
-        margin: 0 !important;
-        border-radius: 0px !important;
-        font-size: 16px !important;
-        text-overflow: clip;
-        &:hover{
-            &::after{
-                margin-top: 18px !important;
-            }
-        }
-    }
-    .header-block_coins,.header-block_crystals{
-        position: relative;
-        width: 130px !important;
-        font-size: 12px;
-    }
-    .header .header-block_coins button, .header .header-block_crystals button {
-        height: 20px !important;
-        width: 20px !important;
-        margin: 7px 10px 0 0 !important;
-        font-size: 14px !important;
-    }
-    .header .header-block_coins img, .header .header-block_crystals img {
-        position: absolute;
-        top: -12px !important;
-        left: 0;
-        height: 60px;
-    }
-    .header .header-block_coins .coins-count, .header .header-block_coins .crystals-count, .header .header-block_crystals .coins-count, .header .header-block_crystals .crystals-count{
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    //fix header
+   header.header .header-button_back,header.header .header-button_home{
+        height: 50px;
         width: 50px;
-        margin:4px 0px 0 40px !important;
+        margin: 20px 0;
+        font-size: 0px;
+      }
+    header.header .header-button_home{
+        background-image: url(../images/home.svg);
     }
-    .header .header-block_coins .coins-count p, .header .header-block_coins .crystals-count p, .header .header-block_crystals .coins-count p, .header .header-block_crystals .crystals-count p{
-        font-size: 10px !important;
+   header.header .header-block_coins,header.header .header-block_crystals{
+        height: 20px;
+        width: 70px;
+        margin: 35px 5px;
+        .coins-count,.crystals-count{
+          position: absolute;
+          top:3px;
+          left: -15px;
+          display: flex;
+          width: 40px;
+          justify-content: center;
+          align-items: center;
+          font-size: 10px;
+          margin-left: 30px;
+          p{
+            font-size:0px;
+          }
+        }
+        img,.img-crystals{
+          height: 30px;
+          position: absolute;
+          top:-5px;
+          left: -15px;
+        }
+        button{
+          position: absolute;
+          top:-5px;
+          left: 45px;
+          height: 20px;
+          width: 20px;
+          font-size: 16px;
+        }
+      }
+      //fix shop container
+      .page{
+          .shop-container{
+              .shop-content{
+                  display: flex;
+                  justify-content: center;
+                  width: 100%;
+                  padding: 10px;
+                  h1{
+                    font-size: 26px;
+                    width: 100%;
+                    text-align: center;
+                  }
+              }
+          }
+      }
+      //fix nav bar
+      .page{
+          .shop-container{
+              margin-top: 60px;
+          .shop-navigation{
+              position: absolute;
+              top:90px;
+              left: 0;
+              width: 100%;
+              .shop-navigation_item{
+                border-radius: 0px;
+                margin: 0;
+              }
+          }
+      }
     }
-
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 612px) and (max-width: 767.98px) {
-    .shop-content_list-crystals,.shop-content_list-coins{
-        grid-template-columns: repeat(2, 1fr) !important;
+ }
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    header.header .header-button_back,header.header .header-button_home{
+        height: 50px;
+        width: 50px;
+        margin: 20px 0;
+        font-size: 0px;
+      }
+    header.header .header-button_home{
+        background-image: url(../images/home.svg);
     }
-    .header-button_home,.header-button_back{
-        margin: 20px 5px !important;
-        width: 45px !important;
-        font-size: 0 !important;
+    .page .shop-container .shop-navigation .shop-navigation_item{
+        font-size: 2vw;
     }
-    .shop-navigation_item{
-        font-size: 14px !important;
+ }
+ @media (max-width:1024px){
+    body .page{
+        background-image: url(../images/background.png) ;
+        background-position: center ;
+        background-size: cover;
     }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .shop-content_list-crystals,.shop-content_list-coins{
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .shop-content_list-crystals,.shop-content_list-coins{
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1600px) { 
-    .shop-content_list-crystals,.shop-content_list-coins{
-        grid-template-columns: repeat(5, 1fr) !important;
-    }
-}
-@media (min-width: 2000px) { 
-    .shop-content_list-crystals,.shop-content_list-coins{
-        grid-template-columns: repeat(6, 1fr) !important;
-    }
-}
-@media (min-width: 2400px) { 
-    .shop-content_list-crystals,.shop-content_list-coins{
-        grid-template-columns: repeat(7, 1fr) !important;
-    }
-}
-@media (min-width: 3400px) { 
-    .shop-content_list-crystals,.shop-content_list-coins{
-        grid-template-columns: repeat(9, 1fr) !important;
-    }
-}
+ }

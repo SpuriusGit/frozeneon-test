@@ -1,0 +1,81 @@
+.header{
+    height: 90px;
+    display: grid;
+    grid-auto-flow:column;
+    justify-content: space-between;
+  
+    background-image: url(../images/bg_top.png);
+    
+    .header-button_back,.header-button_home{
+      height: 50px;
+      width: 110px;
+      margin: 20px;
+      background-color: transparent;
+      background-image: url(../images/arrow-left.svg);
+      background-repeat: no-repeat;
+      border: none;
+      border-radius: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+  
+      color: white;
+      font-size: 15px;
+    }
+    .header-button_back{
+      text-align: right;
+      &:hover{
+        transition: .5s all ease;
+        box-shadow: -4px 0px 3px .5px lightslategrey;
+      }
+    }
+    .header-button_home{
+      background-image: url(../images/home.svg);
+      background-position: left;
+      text-align: right;
+      &:hover{
+        transition: .5s all ease;
+        box-shadow: 4px 0px 3px .5px lightslategrey;
+      }
+    }
+    .header-block_coins,.header-block_crystals{
+      height: 40px;
+      width: 190px;
+      border:1px solid black;
+      border-radius: 20px;
+  
+      position: relative;
+      display: grid;
+      grid-auto-flow:column;
+      justify-content: space-around;
+      margin: 20px;
+      background-color: black;
+      color: white;
+      .coins-count,.crystals-count{
+        margin-left: 60px;
+        p{
+          font-size: 14px;
+          color:lavender;
+        }
+      }
+      img{
+        position: absolute;
+        top:-15px;
+        left: -20px;
+      }
+      .img-crystals{
+        top:-25px;
+      }
+      button{
+        height: 25px;
+        width: 25px;
+        background-color: rgba(33, 204, 20, 1);
+        border:0.5px solid white;
+        box-shadow: 0px 0px 5px #fff;
+        border-radius: 2px;
+        margin: 5px 15px;
+        font-size: 22px;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }

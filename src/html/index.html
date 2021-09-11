@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
       rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <title>Frozeneon</title>
   </head>
   <body>
@@ -27,7 +28,7 @@
         <button class="header-button_home">  HOME</button>
       </header>
       <section class="shop-container">
-        <div class="shop-navigation tabs__links">
+        <div class="shop-navigation tabs__links" id="nav">
           <div class="shop-navigation_item"><a href="#tab-1"> Монстр Боксы</a></div>
           <div class="shop-navigation_item"><a href="#tab-2"> Банк</a></div>
           <div class="shop-navigation_item"><a href="#tab-3"> Наборы</a></div>
@@ -35,32 +36,8 @@
           <div class="shop-navigation_item"><a href="#tab-5"> Промокоды</a></div>
         </div>
         <div class="shop-content tabs">
-          <section id="tab-0">
-            <h1>Кристалы Незера</h1>
-            <ul class="shop-content_list-crystals">
-              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-1.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить<span class="material-icons">attach_money</span> 10</div></li>
-              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-2.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span> 10</div></li>
-              <li class="shop-content_list-item x750"><img src="../src/images/crystal-shop-3.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
-              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-4.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
-              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-5.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
-              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-6.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
-              <li class="shop-content_list-item x750"><img src="../src/images/crystal-shop-7.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
-              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-8.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
-              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-9.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
-            </ul>
-            <h1>Монеты Незера</h1>
-            <ul class="shop-content_list-coins">
-              <li class="shop-content_list-item"><img src="../src/images/coins-shop-1.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon"> 10</div></li>
-              <li class="shop-content_list-item"><img src="../src/images/coins-shop-2.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon">10</div></li>
-              <li class="shop-content_list-item"><img src="../src/images/coins-shop-3.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon">10</div></li>
-              <li class="shop-content_list-item"><img src="../src/images/coins-shop-4.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon">10</div></li>
-              <li class="shop-content_list-item"><img src="../src/images/coins-shop-5.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon">10</div></li>
-              <li class="shop-content_list-item"><img src="../src/images/coins-shop-6.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon">10</div></li>
-            </ul>
-          </section>
-
-          <div id="tab-1">
-            <h1>Кристалы Незера</h1>
+          <div id="tab-0">
+            <h1>Кристаллы Незера</h1>
             <ul class="shop-content_list-crystals">
               <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-1.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
               <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-2.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
@@ -82,9 +59,31 @@
               <li class="shop-content_list-item"><img src="../src/images/coins-shop-6.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon">10</div></li>
             </ul>
           </div>
-
+          <div id="tab-1">
+            <h1>Кристаллы Незера</h1>
+            <ul class="shop-content_list-crystals">
+              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-1.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
+              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-2.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
+              <li class="shop-content_list-item x750"><img src="../src/images/crystal-shop-3.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
+              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-4.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
+              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-5.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
+              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-6.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
+              <li class="shop-content_list-item x750"><img src="../src/images/crystal-shop-7.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
+              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-8.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
+              <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-9.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
+            </ul>
+            <h1>Монеты Незера</h1>
+            <ul class="shop-content_list-coins">
+              <li class="shop-content_list-item"><img src="../src/images/coins-shop-1.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon">10</div></li>
+              <li class="shop-content_list-item"><img src="../src/images/coins-shop-2.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon">10</div></li>
+              <li class="shop-content_list-item"><img src="../src/images/coins-shop-3.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon">10</div></li>
+              <li class="shop-content_list-item"><img src="../src/images/coins-shop-4.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon">10</div></li>
+              <li class="shop-content_list-item"><img src="../src/images/coins-shop-5.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon">10</div></li>
+              <li class="shop-content_list-item"><img src="../src/images/coins-shop-6.png" ><h3>x100</h3><p>Handful of Coins</p><div>Купить <img src="../src/images/crystal_mini.svg" alt="" class="crystal-mini-icon">10</div></li>
+            </ul>
+          </div>
           <div id="tab-2">
-            <h1>Кристалы Незера</h1>
+            <h1>Кристаллы Незера</h1>
             <ul class="shop-content_list-crystals">
               <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-1.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
               <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-2.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
@@ -108,7 +107,7 @@
           </div>
 
           <div id="tab-3">
-            <h1>Кристалы Незера</h1>
+            <h1>Кристаллы Незера</h1>
             <ul class="shop-content_list-crystals">
               <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-1.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
               <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-2.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
@@ -132,7 +131,7 @@
           </div>
 
           <div id="tab-4">
-            <h1>Кристалы Незера</h1>
+            <h1>Кристаллы Незера</h1>
             <ul class="shop-content_list-crystals">
               <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-1.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
               <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-2.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
@@ -156,7 +155,7 @@
           </div>
 
           <div id="tab-5">
-            <h1>Кристалы Незера</h1>
+            <h1>Кристаллы Незера</h1>
             <ul class="shop-content_list-crystals">
               <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-1.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
               <li class="shop-content_list-item x500"><img src="../src/images/crystal-shop-2.png" alt=""><h3>x100</h3><p>Handful of Coins</p><div>Купить <span class="material-icons">attach_money</span>10</div></li>
