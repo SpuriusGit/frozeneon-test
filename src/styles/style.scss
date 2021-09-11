@@ -47,8 +47,10 @@ body{
     background-color: #bbdefb;
     cursor: default;
 }
-
-.tabs>div:not(.tabs__links),#tab-0{
+#tab-0{
+  display: grid;
+}
+.tabs>div:not(.tabs__links){
   display: none;
   order: 1;
 }
