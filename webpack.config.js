@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -12,13 +13,15 @@ module.exports = {
   output: {
     filename: "main-[hash:8].js",
     path: path.resolve(__dirname, 'build'),
-    assetModuleFilename: 'images/[hash][ext][query]'
+    assetModuleFilename: 'images/[hash][ext][query]',
+    publicPath:'',
 },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html",
+      template: path.resolve(__dirname,"src/index.html"),
+      filename:"index.html",
     }),
-    new CleanWebpackPlugin({}),
+    new CleanWebpackPlugin(),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
@@ -26,6 +29,12 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "style.css",
+    }),
+    new CopyPlugin({
+      patterns: [
+        // { from: "source", to: "dest" },
+        { from: "src/images", to: "images" },
+      ],
     }),
   ],
   optimization: {
@@ -53,18 +62,18 @@ module.exports = {
         options: {
           
           // Disables attributes processing
-          sources: true,
+          sources: false,
         },
       },
       {
-        test: /\.(gif|png|jpeg|svg)$/,
+        test: /\.(?:|gif|png|jpg|jpeg|svg)$/,
         use: [
             {
                 loader: 'file-loader',
                 options: {
                   name:'[name].[ext]',
-                  outputPath: './images/',
-                  publicPath: './images/'
+                  outputPath: '/',
+                  // publicPath: './images/'
                 }
             },
             {
